@@ -1,30 +1,10 @@
 <head>
     <link rel="stylesheet" href="styles.css">
-    <script text="javascript">
-      function myFunction(imgs) {
-        // Get the expanded image
-        var expandImg = document.getElementById("expandedImg");
-        // Get the image text
-        var imgText = document.getElementById("imgtext");
-
-        var projectLink = document.getElementById("github-link");
-        // Use the same src in the expanded image as the image being clicked on from the grid
-        expandImg.innerHTML = imgs.src;
-        // Use the value of the alt attribute of the clickable image as text inside the expanded image
-        imgText.innerHTML = imgs.alt;
-
-        projectLink = imgs.href;
-        console.log(imgs.href);
-
-        // Show the container element (hidden with CSS)
-        expandImg.parentElement.style.display = "block";
-    }
-    </script>
 </head>
 
 <div class="wrap">
     <div class="header">
-      <img src="/images/profile.jpg" alt="my profile photo">
+      <img src="/images/profile.jpg" alt="my profile photo"></img>
       <h1 class="title-name">Madison Holloway</h1>
       <ul>
         <li><a class="nav-link" id="navbar-links" href="index.html">Home</a></li>
@@ -44,27 +24,42 @@
     <div class="page">
       <h1>My Projects</h1>
       <div class="row">
-        <div class="column">
-          <img src="/images/daddy.png" href="https://github.com/MrPinkPigg/CISC474-FridgeDaddy" alt="Fridge Daddy is an independent or collaborative application where the user inputs ingredients they currently have or what type of meal they would like to create, and generates a list of options for them to make. Users can then add these recipes to a personal cookbook tied to their account or a shared cookbook with other “chefs”. Users can also choose to upload their own recipes, or share their cookbooks with friends." class="project-img" onclick="myFunction(this);">
+        <div class="icon-column">
+          <img src="/images/daddy.png" alt="Fridge Daddy icon" class="project-img">
         </div>
-        <div class="column">
-          <img src="/images/maizemaster.jpeg" href="https://github.com/CISC275-F2020/project-team-7"alt="MaizeMaster is an iPadOS application, that was created to assist The Sparks Lab at the University of Delaware in their research to measure plant biomechanics, in this case maize, to limit crop loss due to mechanical failure. This application is expected to collect data from the biomechanics devices in real-time. It allows the researcher to connect to the device via bluetooth, scan the plant’s QR code that they are running the current test on, start the device, run the test, collect the data, and store those data values locally and remotely." class="project-img" onclick="myFunction(this);">
-        </div>
-        <div class="column">
-          <img src="/images/superkid.jpeg" href="https://github.com/Spring-2021-CISC374/superkid-beta" alt="SuperKid is a choose your own adventure game, where the kid playing gets to customize their own superpower and superhero, who is then faced with decisions that decide their fate. The learning objectives for this game are to demonstrate critical thinking skills, to contrast the consequences of each option they are presented with, to develop a strong sense of morality, to build inner-confidence, and to adapt against their enemy (who is also a kid, just like them)." class="project-img" onclick="myFunction(this);">
-        </div>
-        <div class="column">
-          <img src="/images/udress.jpg" href="http://udressmag.com/" alt="UDress Magazine is a fully student-run fashion and lifestyle magazine here at the University of Delaware. I joined the layout team my freshman year, and my responsibilities were to graphically design the layout of a spread given the article and photographs of the spread. This position taught me the importance of innovative and sleek design, and is directly applicable to my experiences building front-end platforms as a software engineer. I was promoted to assistant art director, and then eventually head art director on the executive board last year." class="project-img" onclick="myFunction(this);">
+        <div class="description-column">
+          <h3>Fridge Daddy is an independent or collaborative application where the user inputs ingredients they currently have or what type of meal they would like to create, and generates a list of options for them to make. Users can then add these recipes to a personal cookbook tied to their account or a shared cookbook with other “chefs”. Users can also choose to upload their own recipes, or share their cookbooks with friends.</h3>
+          <a href="https://github.com/MrPinkPigg/CISC474-FridgeDaddy" <h2 class="resume-link">Click to here to see the source code</h2></a>
         </div>
       </div>
-      <div class="container">
-        <div id="imgtext" class="imgtext"></div>
-        <div id="github-link" class="github-link"></div>
+      <div class="row">
+        <div class="icon-column">
+          <img src="/images/maizemaster.jpeg" alt="MaizeMaster icon" class="project-img">
+        </div>
+        <div class="description-column">
+          <h3>MaizeMaster is an iPadOS application, that was created to assist The Sparks Lab at the University of Delaware in their research to measure plant biomechanics, in this case maize, to limit crop loss due to mechanical failure. This application is expected to collect data from the biomechanics devices in real-time. It allows the researcher to connect to the device via bluetooth, scan the plant’s QR code that they are running the current test on, start the device, run the test, collect the data, and store those data values locally and remotely.</h3>
+          <a href="https://github.com/MrPinkPigg/CISC474-FridgeDaddy" <h2 class="resume-link">Click to here to see the source code</h2></a>
+        </div>
       </div>
+      <div class="row">
+        <div class="icon-column">
+          <img src="/images/superkid.jpeg" alt="SuperKid icon" class="project-img">
+        </div>
+        <div class="description-column">
+          <h3>SuperKid is a choose your own adventure game, where the kid playing gets to customize their own superpower and superhero, who is then faced with decisions that decide their fate. The learning objectives for this game are to demonstrate critical thinking skills, to contrast the consequences of each option they are presented with, to develop a strong sense of morality, to build inner-confidence, and to adapt against their enemy (who is also a kid, just like them).</h3>
+          <a href="https://github.com/Spring-2021-CISC374/superkid-beta" <h2 class="resume-link">Click to here to see the source code</h2></a>
+        </div>
       </div>
+      <div class="row">
+        <div class="icon-column">
+          <img src="/images/udress.jpg" alt="UDress Magazine icon" class="project-img">
+        </div>
+        <div class="description-column">
+          <h3>UDress Magazine is a fully student-run fashion and lifestyle magazine here at the University of Delaware. I joined the layout team my freshman year, and my responsibilities were to graphically design the layout of a spread given the article and photographs of the spread. This position taught me the importance of innovative and sleek design, and is directly applicable to my experiences building front-end platforms as a software engineer. I was promoted to assistant art director, and then eventually head art director on the executive board last year.</h3>
+          <a href="http://udressmag.com/" <h2 class="resume-link">Click to here to visit the webpage</h2></a>
+        </div>
       </div>
     </div>
-</div>
     <div class="footer">
       <h3>Contact Me</h3>
       <a href="https://www.linkedin.com/in/madison-holloway/"><img src="/images/linkedin.png" alt="LinkedIn profile" style="width:30px;height:30px;" class="contact-img"></a>
