@@ -6,18 +6,98 @@
     <meta name="viewport" content="width=device-width">
     <title>Personal Webpage 1</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript">
+      function dropdownOnClick() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
     
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
 </head>
 
 <body>
-    <div class="madison-homepage">
-            <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <div class="wrap">
+    <div class="header">
+        <img src="/images/profile.jpg" alt="my profile photo">
+        <h1 class="title-name">Madison Holloway</h1>
+        <!-- <button onclick="dropdownOnClick()" class="dropbtn">Class Links</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="https://mattm401.github.io">Course Page</a>
+          <a href="https://noahhodgson.github.io/474GithubPage/">Previous Student</a>
+          <a href="https://katznoah.github.io/">Next Student</a>
+        </div> -->
+        <ul>
+        <li><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+        <li><a class="nav-link" id="navbar-links" href="/projects.html">Projects</a></li>
+        <li><a class="nav-link" id="navbar-links" href="/resume.html">Resume</a></li>
+        <li><a class="nav-link" id="navbar-links" href="/contactForm.html">Contact Page</a><li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Course Links</a>
+          <div class="dropdown-content">
+            <a href="https://mattm401.github.io">Course Page</a>
+            <a href="https://noahhodgson.github.io/474GithubPage/">Previous Student</a>
+            <a href="https://katznoah.github.io/">Next Student</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="page">
+      <h1>hi, I’m Madison.</h1>
+      <h2>I am a senior at the University of Delaware studying Computer Science with a minor in Integrated Design. This past summer, I worked as a delivery engineering intern on a DevOps team for a financial tech company in Massachusetts, and am actively looking for a full-time position after college.</h2>
+      <h2>I am most interested in software engineering and user experience design, and artificial intelligence. Some of my strengths as a software engineer include being communicative, organized, adaptive, and motivated by a challenging problem. Outside of coding, I love all things entertainment, cooking with my roommates, playing with my dog, and doing anything outdoors! </h2>
+      <h2>You can view some of my projects <a href="/projects.html">here.</a></h2>
+    </div>
+    <div class="footer">
+      <h3>Contact Me</h3>
+      <a href="https://www.linkedin.com/in/madison-holloway/"><img src="/images/linkedin.png" alt="LinkedIn profile" style="width:30px;height:30px;" class="contact-img"></a>
+      <a href="https://github.com/madholl"><img src="/images/github.png" alt="Github profile" style="width:30px;height:30px;margin-left:5px;margin-right:5px" class="contact-img"></a>
+      <a href="mailto:madholl@udel.edu?"><img src="/images/email.png" alt="email contact" style="width:30px;height:30px;" class="contact-img"></a>
+    </div>
+  </div>
+
+  <!-- <div style="width:100%;"> 
+      <div class="left-page">
+      Left 
+      </div>
+      <div class="right-page">
+      Right
+      </div>
+  </div> -->
+    <!-- <div class="madison-homepage">
+          <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
             <div class="container-fluid">
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                   <a class="nav-link" aria-current="page" href="index.html">Home</a>
                   <a class="nav-link" href="aboutMe.html">About Me</a>
-                  <a class="nav-link" href="https://mattm401.github.io">Course Page</a>
+                  <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Class Links</button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="https://mattm401.github.io">Course Page</a>
+                      <a href="https://noahhodgson.github.io/474GithubPage/">Previous Student</a>
+                      <a href="https://katznoah.github.io/">Next Student</a>
+                    </div>
+                  </div>
+                -->
+                  <!-- <label for="course-links">Class Links</label>
+                  <select name="course-links" id="course-links">
+                      <option value="course-page" href="https://mattm401.github.io">Course Page</option>
+                      <option value="prev-student" href="https://noahhodgson.github.io/474GithubPage/">Previous Student</option>
+                      <option value="next-student" href="https://katznoah.github.io/">Next Student</option>
+                  </select> -->
+                  <!-- <a class="nav-link" href="https://mattm401.github.io">Course Page</a>
                   <a class="nav-link" href="https://noahhodgson.github.io/474GithubPage/">Previous Student</a>
                   <a class="nav-link" href="https://katznoah.github.io/">Next Student</a>
                   <a class="nav-link" href="contactForm.html">Contact Form</a>
@@ -37,7 +117,7 @@
             <div class="row">
                 <h2 class="full-name">(I go by Madison)</h2>
             </div>
-    </div>
+    </div>  -->
 </body>
 
 </html>
